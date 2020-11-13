@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>しりとりドラゴンズ ワード検索</title>
+        <style>
+            p{margin: 0;}
+            #box{display: flex;}
+            .change_text_color{color: red;}
+            .change_text_color2{color: orange;}
+            .change_text_color3{color: lightskyblue;}
+            .change_text_color4{color: green;}
+            .change_text_color5{color: blue;}
+        </style>
+    </head>
+    <body>
+        <div id = "box">
+            <div>
+                <h3>頭文字</h3>
+                <input type="text" id="initial" value=""><input type="button" value="検索" onclick="onclick_search()">
+                <h3><span id="char_start"></span>から始まる未使用ワード</h3>
+                <div id="start">
+                </div >
+            </div>
+            <div>
+                <h3>使ったワード</h3>
+                <input type="text" id="used_word" value=""><input type="button" value="検索" onclick="onclick_change_used()">
+                <h3><span id="char_used"></span>から始まる使用済みワード</h3>
+                <div id="used">
+                </div >
+            </div>
+            <div>
+                <h3>未使用に戻すワード</h3>
+                <input type="text" id="return_word" value=""><input type="button" value="検索" onclick="onclick_return()"> 
+                <h3>ログ</h3>
+                <div id="word_log"></div>
+            </div>
+            <div><h3>残り<span id = "remain_text"></span></h3>
+            </div>
+            <div>
+                <input type="button" value="全て使用済みに登録" onclick="onclick_change_all_used()"><br>
+                <input type="button" value="ピコハンモードをON" onclick="onclick_pikohum_mode_flag_change(this)">
+            </div>
+        </div>
+        <script src="./js/word_list.js"></script>
+        <script src="./js/word_used_flag_list.js"></script>
+        <script src="./js/checker.js"></script>
+        <script src="./js/onclick_pikohum_mode_flag_change.js"></script>
+        <script src="./js/onclick_search.js"></script>
+        <script src="./js/onclick_change_used.js"></script>
+        <script src="./js/onclick_return.js"></script>
+        <script src="./js/onclick_p.js"></script>
+        <script src="./js/word_log.js"></script>
+        <script src="./js/onclick_change_all_used.js"></script>
+
+    </body>
+</html>
+
